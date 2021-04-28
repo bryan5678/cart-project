@@ -1,209 +1,3 @@
-// .myNavBar{
-//     box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
-//     .myNavBar__left{
-//         display: flex;
-//         align-items: center;
-//        .navbar-brand{
-//            flex-grow: 1;
-//            text-align: center;
-//            img{
-//                 width: 110px;
-//                 &.logo-black{
-//                     display: inline-block;
-//                 }
-//                 &.logo-white{
-//                     display: none;
-//                 }
-//            }
-//        }
-//        .myNavBar__categories{
-//             align-items: center;
-//             justify-content: space-evenly;
-//             text-align: center;
-//             flex-grow: 1;
-           
-//             @include styleText($color-text-1c-border, $fs-0, $fw-0);
-//             svg{
-//                 color: $color-text-1e;
-//             }
-//        } 
-//        .myNavBar__form-search{
-//             flex-grow: 8;
-//             @include styleFormSearch($color-bg-4, $color-text-4, $color-bg-3, $color-text-1b);
-//        }
-//     }   
-
-//     .myNavBar__right{
-//         .navbar-nav{
-//             justify-content: space-between;
-//             align-items: center;
-//             text-align: center;
-//             .nav-item{
-//                border-radius: $br-0 + 1;
-//                position: relative;
-//                 &:hover{
-//                     background-color: $color-bg-1;
-//                     .myNavBar__overplay{
-//                         display: block;
-//                     }
-//                 }
-
-//                 &:first-child, &:nth-child(2){
-//                     .nav-link::after{
-//                         width: 100%;
-//                         content: "";
-//                         display: block;
-//                         top: 100%;
-//                         right: 0;
-//                         // background-color: black;
-//                         position: absolute;
-//                         height: $size-overplay;
-//                     }
-//                 }
-//                 .nav-link{
-//                     @include styleText($color-text-1c-border, $fs-0, $fw-0);
-//                     padding: $pd-1 + 2 $pd-1;
-//                 }
-//                 .myNavBar__overplay{
-//                     display: none;
-//                     background-color: $color-text-4;
-//                     min-width: 330px;
-//                     padding: $pd-3;
-//                     text-align: center;
-//                     position: absolute;
-//                     top: 100%;
-//                     transform: translateY($size-overplay);
-//                     right: 0;
-//                     box-shadow: 0 4px 16px $color-border-5;
-//                     border: 1px solid $color-bg-1;
-
-//                     z-index: 1000;
-//                     &::after{
-//                         content: "";
-//                         $size-arrow: 15px;
-//                         width: $size-arrow;
-//                         height: $size-arrow;
-//                         background-color: $color-text-4;
-//                         border-top: 1px solid $color-bg-1;
-//                         border-left: 1px solid $color-bg-1;
-//                         z-index: 0;
-//                         display: block;
-//                         position: absolute;
-//                         right: 22.5%;
-//                         top: 0;
-//                         transform: rotate(45deg) translateY(-$size-arrow * 0.8);
-//                         // background-color: black;
-//                     }
-                    
-//                 }
-//             }
-//             .myNavBar__cart{
-//                 $dimension: 50px;
-//                 width:  $dimension;
-//                 height:  $dimension;
-//                 border-radius: $br-1;
-//                 line-height: $dimension;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-//                 .nav-link{
-//                     font-size: $fs-2;
-//                     padding: 0;
-//                 }
-                
-//             }
-//             .myNavBar__buttons{
-//                &:hover{
-//                    background-color: transparent;
-//                }
-//                .nav-link{
-//                 display: flex;
-//                 .button{
-//                     white-space: nowrap;
-//                 } 
-//                 .button--white{
-//                     margin-right: $mg-0;
-//                 }   
-//                }
-//             }
-//         }
-//     }
-// }
-
-//     @media screen and (min-width:1200px) and (max-width:1339px){       
-//         .myNavBar__right{
-//             .navbar-nav{
-//                 .nav-item{
-//                     &.business, &.instructor{
-//                         white-space: nowrap;
-//                         .nav-link{
-//                             font-size: $fs-0 - 1;
-//                         }    
-//                     }
-                    
-//                 } 
-//                 .myNavBar__cart{
-//                     .nav-link{
-//                         font-size: $fs-1 - 1;
-//                     } 
-
-//                 }
-//             }
-//         }   
-//         .myNavBar--reset {
-//                 padding-left: 0;
-//         }
-//     }
-
-//     @include responsive("xl"){
-//         .business, .instructor{
-//             display: none;
-//         }
-//     }
-
-//     @include responsive("lg"){
-//         .myNavBar{
-//             .myNavBar__left{
-//                 .navbar-brand{
-//                     margin-right: 0;
-//                 }
-//                 .myNavBar__categories{
-//                     font-size: $fs-3 + 2;
-//                     margin: $mg-1;
-//                    span{
-//                     display: none 
-//                    } 
-//                 }
-//             }
-//             .myNavBar--reset {
-//                 padding-left: 0;
-//         }
-//         }
-//     }
-
-//     @include responsive("md"){
-//         .myNavBar__left{
-            
-//             .myNavBar__form-search{
-//                 display: none;
-
-//             }
-            
-//         }
-//         .myNavBar__right{
-//             .myNavBar__buttons{
-//                 display: none;
-//             }
-//         }
-       
-//     }
-
-
-
-// .flex-basis-auto{
-//     flex-basis: auto;
-// }
-
 
 .cart{
     width: 14px;
@@ -216,31 +10,31 @@
     line-height: 14px;
     font-size: 10px;
     position: absolute;
-    right: 1px;
+    right: 5px;
     top: 20%;
 }
 .cart-wide{
     width: 22px;
-    right: -8px;
+    right: 0px;
 
 }
 
 @include responsive("md"){
-    .cart{
-        left: 10px;
+    // .cart{
+    //     left: 10px;
 
-        bottom: 10%;
-        top: unset;
-        right: unset;
+    //     bottom: 10%;
+    //     top: unset;
+    //     right: unset;
 
-    }
-    .cart-wide{
-        width: 22px;
-        left: 10px;
-        bottom: 10%;
+    // }
+    // .cart-wide{
+    //     width: 22px;
+    //     left: 10px;
+    //     bottom: 10%;
 
-        top: unset;
-        right: unset;
-    }
+    //     top: unset;
+    //     right: unset;
+    // }
 
 }  

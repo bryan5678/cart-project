@@ -1,11 +1,11 @@
-import React from 'react'
-import Home from './sass/Layout/Home';
-import Product from './sass/Layout/Product';
-import Contact from './sass/Layout/Contact';
-import About from './sass/Layout/About';
-import NotFound from './sass/Layout/NotFound';
-import Detail from './sass/Layout/Detail';
-import Cart from './sass/Layout/Cart';
+import React from 'react';
+import About from './pages/About';
+import Cart from './pages/Cart';
+import Contact from './pages/Contact';
+import Detail from './pages/Detail';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import Product from './pages/Product';
 
 
 const routes = [
@@ -21,27 +21,27 @@ const routes = [
     },
     {
         path: '/product/:id',
-        exact: false,
+        exact: true,
         main: ({match}) => <Detail match={match} />
     },
     {
         path: '/contact',
-        exact: false,
+        exact: true,
         main: () => <Contact />
     },
     {
         path: '/about',
-        exact: false,
+        exact: true,
         main: () => <About />
     },
     {
         path: '/cart',
-        exact: false,
+        exact: true,
         main: ({match}) => <Cart match={match} />
     },
     {
         path: '',
-        exact: false,
+        exact: true,
         main: () => <NotFound />
     },
 ]

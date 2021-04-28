@@ -2,27 +2,42 @@ import React, { Component } from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { FaRegStar, FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import DataContext from './DataContext';
+import DataContext from '../../components/contextAPI/DataContext';
 
 class Detail extends Component {
     static contextType = DataContext;
     state = {
-        product: []
+        product: [],
+        // redirect: false
+
     }
 
     getProduct = () =>{
-        if(this.props.match.params.id){
-            const {products} = this.context
-            // const res = this.context.products;
-            const id = this.props.match.params.id
+        const {products} = this.context
+        const {product} = this.state
+        const id = Number(this.props.match.params.id)
 
-            const data = products.filter(item =>{
-                return item._id === id 
-            })
-            this.setState({product: [...data]},
-            ()=>console.log(this.state.product)
-            )
-        }
+        products.forEach((item, index) =>{
+            if(item._id === id){
+                product.push(products[index])
+                this.setState({product},
+                    ()=>console.log(product)
+                )
+            }
+          
+        })    
+        // if(this.props.match.params.id){
+        //     // const res = this.context.products;
+        //     const id = Number(this.props.match.params.id)
+        //     console.log(id)
+
+        //     const data = products.filter(item =>{
+        //         return item._id === id 
+        //     })
+        //     this.setState({product: [...data]},
+        //     // ()=>console.log(this.state.product)
+        //     )
+        // }
     };
 
     componentDidMount(){
@@ -35,6 +50,7 @@ class Detail extends Component {
             ,()=> console.log(this.state.product)
             )
         }
+        
 
     }
     componentDidUpdate(){
@@ -106,7 +122,7 @@ class Detail extends Component {
                                                     <Link className=" f-15" to="/product">Back to Product List</Link>     
                                                 </Col>
                                                 <Col>
-                                                    <Button className ="w-50 f-15" size="sm" onClick={()=> this.context.addCart(item._id)} variant="primary">Buy now</Button>
+                                                    <Button className ="w-50 f-15" size="sm" onClick={()=> this.context.changeCart(item._id, "+1")} variant="primary">Buy now</Button>
                                                 </Col>
                                             </Row>
                                         </Col>

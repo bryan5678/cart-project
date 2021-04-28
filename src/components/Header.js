@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
-import {Route, NavLink, Link} from 'react-router-dom'
-import {FaShoppingCart} from 'react-icons/fa'
-import DataContext from './DataContext'
+import { FaShoppingCart } from 'react-icons/fa';
+import { Link, NavLink, Route } from 'react-router-dom';
+import DataContext from './contextAPI/DataContext';
 
 
 const menus = [
@@ -14,7 +14,7 @@ const menus = [
   {
     name: "Product",
     to: "/product",
-    exact: false,
+    exact: false, /* chỉnh tab active ngay khi load trang set true ở exact */
   },
   {
     name: "Contact",
@@ -26,11 +26,11 @@ const menus = [
     to: "/about",
     exact: false,
   },
-  {
-    name: <FaShoppingCart/>,
-    to: "/cart",
-    exact: false,
-  },
+  // {
+  //   name: <FaShoppingCart/>,
+  //   to: "/cart",
+  //   exact: false,
+  // },
 
   
 ]
@@ -56,6 +56,9 @@ const MenuItems=  ({label, to, activeOnlyWhenExact})=>{
 
     render() {
         const {cart} = this.context
+        let totalItem = cart.reduce((prev, item)=>{
+          return prev +  item.count
+        },0)
 
         let menuItems= menus.map((menuItem, index)=>{
           return(
@@ -67,19 +70,25 @@ const MenuItems=  ({label, to, activeOnlyWhenExact})=>{
           )
         }) 
         return (
-            <Navbar bg="light" expand="md" className="py-0">
+            <Navbar bg="light" expand="md" className="py-0 flex-row-reverse">
+
+              <Navbar.Brand as="div" className="py-0">
+                <Link className="no-underline relative" to="/cart">
+                   <MenuItems label={<FaShoppingCart/>} to="/cart"/>
+                   <span className={`cart ${totalItem>99 ? "cart-wide"  : ""}`}>{totalItem}</span>
+                </Link>
+              </Navbar.Brand>
+
+              <Navbar.Brand as="div"><Link className="mx-auto no-underline" to="/">React-Bootstrap</Link></Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-              <Navbar.Brand as="div"><Link className="no-underline" to="/">React-Bootstrap</Link></Navbar.Brand>
-                  
-
               <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ml-auto relative" as="ul">
+                <Nav className=" relative" as="ul">
                 
                 {menuItems}
                 
-                <span className={`cart ${cart.length>99 ? "cart-wide"  : ""}`}>{cart.length}</span>
-               
+                {/* <span className={`cart ${totalItem>99 ? "cart-wide"  : ""}`}>{totalItem}</span> */}
+
                 {/* <MenuItems label="Home" to="/" activeOnlyWhenExact/>
                 <MenuItems label="Product" to="/product"/>
                 <MenuItems label="Contact" to="/contact"/>
@@ -104,6 +113,7 @@ const MenuItems=  ({label, to, activeOnlyWhenExact})=>{
                 </Nav>
 
               </Navbar.Collapse>
+
 
           </Navbar>
         )

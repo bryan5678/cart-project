@@ -1,0 +1,284 @@
+
+
+{
+    "products": [
+        {
+            "_id": 1121,
+            "img": "/img/kh1.jpg",
+            "alt": "Course",
+            "title": "Samsung Galaxy Note 20 Ultra - 128Gb, Khuyến mãi khủng. Duy nhất hôm nay",
+            "text": "Samsung",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.6,
+            "total": "(11.597)",
+            "oldPrice": 179.99,
+            "newPrice": 9.9,
+            "stars": 4,
+            "halfStars": 1,
+            "unStars": 0,
+            "count": 1
+        
+        },
+        {
+            "_id": 1122,
+            "img": "/img/kh2.jpg",
+            "alt": "Course",
+            "title": "iPhone 12 128GB - 4GB, Khuyến mãi khủng. Duy nhất hôm nay",
+            "text": "Apple",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.6,
+            "total": "(1.159)",
+            "oldPrice": 59.99,
+            "newPrice": 39.9,
+            "stars": 2,
+            "halfStars": 1,
+            "unStars": 2,
+            "count": 1
+        
+        
+        },
+        {
+            "_id": 1123,
+            "img": "/img/kh3.jpg",
+            "alt": "Course",
+            "title": "Xiaomi Mi 11 5G - 128Gb, Khuyến mãi khủng. Duy nhất hôm nay",
+            "text": "Xiaomi",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.2,
+            "total": "(8.597)",
+            "oldPrice": 79.99,
+            "newPrice": 9.9,
+            "stars": 1,
+            "halfStars": 1,
+            "unStars": 3,
+            "count": 1
+        
+        
+        },
+        {
+            "_id": 1124,
+            "img": "/img/kh4.jpg",
+            "alt": "Course",
+            "title": "Vivo X60 Pro 5G - 128Gb, Khuyến mãi khủng. Duy nhất hôm nay",
+            "text": "Vivo",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.6,
+            "total": "(15.297)",
+            "oldPrice": 109.99,
+            "newPrice": 29.9,
+            "stars": 3,
+            "halfStars": 1,
+            "unStars": 1,
+            "count": 1
+        
+        },
+        {
+            "_id": 1125,
+            "img": "/img/kh5.jpg",
+            "alt": "Course",
+            "title": "OnePlus Nord 5G - 128Gb, Khuyến mãi khủng. Duy nhất hôm nay",
+            "text": "OnePlus",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.2,
+            "total": "(21.597)",
+            "oldPrice": 159.99,
+            "newPrice": 99.9,
+            "stars": 2,
+            "halfStars": 0,
+            "unStars": 3,
+            "count": 1
+        
+        },
+        {
+            "_id": 1126,
+            "img": "/img/kh6.jpg",
+            "alt": "Course",
+            "title": "OPPO Reno4 Pro - 128Gb, Khuyến mãi khủng. Duy nhất hôm nay",
+            "text": "OPPO",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.7,
+            "total": "(12.397)",
+            "oldPrice": 149.99,
+            "newPrice": 59.9,
+            "stars": 3,
+            "halfStars": 0,
+            "unStars": 2,
+            "count": 1
+        
+        },
+        {
+            "_id": 1127,
+            "img": "/img/kh7.jpg",
+            "alt": "Course",
+            "title": "Realme 7 Pro - 128Gb, Khuyến mãi khủng. Duy nhất hôm nay",
+            "text": "Realme",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.7,
+            "total": "(12.397)",
+            "oldPrice": 149.99,
+            "newPrice": 49.9,
+           "stars": 3,
+            "halfStars": 0,
+            "unStars": 2,
+            "count": 1
+        
+        },
+        {
+            "_id": 1128,
+            "img": "/img/kh8.jpg",
+            "alt": "Course",
+            "title": "Vsmart Aris Pro - 128Gb, Khuyến mãi khủng long. Duy nhất hôm nay",
+            "text": "Vsmart",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.7,
+            "total": "(12.397)",
+            "oldPrice": 149.99,
+            "newPrice": 109.9,
+            "stars": 3,
+            "halfStars": 0,
+            "unStars": 2,
+            "count": 1
+        
+        },
+        {
+            "_id": 1129,
+            "img": "/img/kh9.jpg",
+            "alt": "Course",
+            "title": "Realme 8 - 128Gb, Khuyến mãi khủng long. Duy nhất hôm nay",
+            "text": "Realme",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.3,
+            "total": "(10.597)",
+            "oldPrice": 189.99,
+            "newPrice": 119.9,
+            "stars": 4,
+            "halfStars": 0,
+            "unStars": 1,
+            "count": 1
+        
+        },
+        {
+            "_id": 1130,
+            "img": "/img/kh10.jpg",
+            "alt": "Course",
+            "title": "OPPO A74 - 64Gb, Khuyến mãi khủng long. Duy nhất hôm nay",
+            "text": "OPPO",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.5,
+            "total": "(1.279)",
+            "oldPrice": 179.99,
+            "newPrice": 89.9,
+            "stars": 3,
+            "halfStars": 1,
+            "unStars": 1,
+            "count": 1
+        
+        },
+        {
+            "_id": 1131,
+            "img": "/img/kh11.jpg",
+            "alt": "Course",
+            "title": "Xiaomi Mi 11 Lite - 128Gb, Khuyến mãi khủng long. Duy nhất hôm nay",
+            "text": "Xiaomi",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.6,
+            "total": "(3.397)",
+            "oldPrice": 179.99,
+            "newPrice": 49.9,
+            "stars": 4,
+            "halfStars": 1,
+            "unStars": 1,
+            "count": 1
+        
+        },
+        {
+            "_id": 1132,
+            "img": "/img/kh12.jpg",
+            "alt": "Course",
+            "title": "Samsung Galaxy M51, Khuyến mãi khủng long. Duy nhất hôm nay",
+            "text": "Samsung",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.4,
+            "total": "(9.876)",
+            "oldPrice": 179.99,
+            "newPrice": 89.9,
+            "stars": 2,
+            "halfStars": 1,
+            "unStars": 2,
+            "count": 1
+        
+        },
+        {
+            "_id": 1133,
+            "img": "/img/kh12.jpg",
+            "alt": "Course",
+            "title": "iPhone 12 Pro Max 128GB, Khuyến mãi khủng long. Duy nhất hôm nay",
+            "text": "Apple",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.8,
+            "total": "(14.997)",
+            "oldPrice": 249.99,
+            "newPrice": 139.9,
+            "stars": 5,
+            "halfStars": 0,
+            "unStars": 0,
+            "count": 1
+        
+        },
+        {
+            "_id": 1134,
+            "img": "/img/kh14.jpg",
+            "alt": "Course",
+            "title": "Vsmart Joy 4 - 64Gb, Khuyến mãi khủng long. Duy nhất hôm nay",
+            "text": "Vsmart",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.5,
+            "total": "(2.457)",
+            "oldPrice": 109.99,
+            "newPrice": 19.9,
+            "stars": 4,
+            "halfStars": 1,
+            "unStars": 1,
+            "count": 1
+        
+        }, 
+        {
+            "_id": 1135,
+            "img": "/img/kh15.jpg",
+            "alt": "Course",
+            "title": "Vivo Y72 5G, Khuyến mãi khủng long. Duy nhất hôm nay",
+            "text": "Vivo",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.2,
+            "total": "(12.397)",
+            "oldPrice": 149.99,
+            "newPrice": 109.9,
+            "stars": 4,
+            "halfStars": 0,
+            "unStars": 1,
+            "count": 1
+        
+        },
+        {
+            "_id": 1136,
+            "img": "/img/kh16.jpg",
+            "alt": "Course",
+            "title": "Nokia 5.4 - 64Gb, Khuyến mãi khủng long. Duy nhất hôm nay",
+            "text": "Nokia",
+            "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quo maiores voluptatem exercitationem consequatur soluta eius eligendi accusantium molestias repellendus. Animi facere eligendi earum! Veniam iste corporis eveniet quasi sapiente ea doloribus fugiat sequi ad quod dolorum quis ab, distinctio assumenda rerum beatae minus nulla, ratione, iusto exercitationem blanditiis asperiores.",
+            "score": 4.1,
+            "total": "(1.039)",
+            "oldPrice": 139.99,
+            "newPrice": 29.9,
+            "stars": 3,
+            "halfStars": 0,
+            "unStars": 2,
+            "count": 1
+        
+        }
+        
+    ]
+  }
+
+
+ 

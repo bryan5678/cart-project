@@ -1,8 +1,10 @@
 /* make the customizations */
 $theme-colors: (
+        "muted1": #ffffff,
+
         "info": black,
         "danger": rgb(245, 73, 42),
-        "info1": #252525,
+        "info1": #e67e7e,
         "color-text-5-bg": #ec5252,
 
 );
@@ -31,5 +33,5 @@ $theme-colors: (
 // ) !default;
 
 /* import bootstrap to set changes */
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 // @import "~bootstrap/scss/bootstrap";

@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import DataProvider from './components/contextAPI/DataProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <DataProvider>
+        <App />
+      </DataProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
