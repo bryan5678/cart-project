@@ -22,9 +22,6 @@ export class Product extends Component {
 
     componentWillUnmount(){
         console.log("Product componentWillUnmount")
-        // console.log(this.state.cart)
-        const {rangePrice, products} = this.context
-
       
         
     }
@@ -33,10 +30,8 @@ export class Product extends Component {
 
         let result = products.map((product)=>{
             return (
-
                 <Col key={product._id} xs={12} sm={6} md={4} lg={3} >
                     <Fade>
-
                         <Card className="card--courses mb-3">
                             <NavLink className="no-underline" to={`${this.props.match.url}/${product._id}`}>
                                 <Card.Img className="px-4 py-3" variant="top" src={product.img} alt={product.alt}/>
@@ -72,9 +67,7 @@ export class Product extends Component {
                             <Button className ="w-50 container mb-3" size="sm" onClick={()=> changeCart(product._id, "+1")} variant="primary">Buy now</Button>
                         </Card> 
                     </Fade>
-
                 </Col> 
-          
             )
         })
         return (
@@ -82,16 +75,12 @@ export class Product extends Component {
                 <h1 className="app">Product list</h1>
                 <p className="app">{this.props.match.url}</p>
                 <Row className="mb-4">
-                    {/* <Col sm={{ span: 4, offset: 4 }}></Col> */}
-
                     <Col sm={6} md={6} lg={6}>
                         <Sort/>
                     </Col>
-
                     <Col sm={6} md={6} lg={6}>
                         <Filter/>
-                    </Col>
-                  
+                    </Col>             
                 </Row>
                 <Row>
                     {result}

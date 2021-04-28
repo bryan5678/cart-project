@@ -52,7 +52,6 @@ class Cart extends Component {
         let total1 = cart.reduce((prev, item)=>{
             return prev + (item.newPrice * item.count)
         },0)
-        // console.log(obj)
 
         // let val = obj.forEach(([key, value]) => {
         //     console.log(`${key} ${value}`); 

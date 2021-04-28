@@ -7,28 +7,14 @@ import DataContext from '../../contextAPI/DataContext';
 class Filter extends Component {
     static contextType = DataContext
 
-    // componentDidUpdate(){
-    //     console.log("About componentDidUpdate")
-    // };
-
-    // componentDidMount(){
-    //     console.log("About componentDidMount")
-    // }
-    // componentWillUnmount(){
-    //     console.log("About componentWillUnmount")
-    //     // console.log(this.state.cart)
-        
-    // }
     render() {
         const {rangePrice, filter} = this.context
 
         return (
-        // <Form>
              <Form className="mt-md-3">
              <Form.Row className="mt-3 mt-sm-0 justify-content-start align-items-center">
                  <Col sm={4} md={4} lg={3} className="text-sm-left">
                     <Form.Label>Range Price: </Form.Label>
-
                  </Col>
 
                  <Col sm={8} md={8} lg={6}>
@@ -44,10 +30,8 @@ class Filter extends Component {
                          <option value="price2">$20 - $50</option>
                          <option value="price3">$50 - $100</option>
                          <option value="price4">More than $100</option>
-
                      </Form.Control>
-                 </Col>
-                 
+                 </Col>   
              </Form.Row>
          </Form>
         )

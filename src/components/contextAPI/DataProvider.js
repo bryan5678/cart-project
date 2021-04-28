@@ -40,62 +40,59 @@ class DataProvider extends Component {
       }
 
     filter = (event) =>{
-        const {rangePrice} = this.state;
 
         const rangePriceValue = event.target.value
-        const filterProducts = data.products.filter((item)=>{
-            if(rangePriceValue==="price0"){
-                return item.newPrice 
-            }
+        const filterProducts = Array.from(data.products).filter((item)=>{
+           
             if(rangePriceValue==="price1"){
                 return item.newPrice < 20
             }
-            if(rangePriceValue==="price2"){
+            else if(rangePriceValue==="price2"){
                 return item.newPrice > 20 && item.newPrice < 50
 
             }
-            if(rangePriceValue==="price3"){
+            else if(rangePriceValue==="price3"){
                 return item.newPrice >50 && item.newPrice < 100
             }
-            if(rangePriceValue==="price4"){
+            else if(rangePriceValue==="price4"){
                 return item.newPrice > 100
-            }
+            }else {return item.newPrice }
+
         })
 
         this.setState(
             {rangePrice: rangePriceValue, products: filterProducts}
-            ,()=> console.log(rangePrice)
+            // ,()=> console.log(rangePrice)
 
         )
     }
 
     sorting = (event) =>{
-        const {products, sort} = this.state;
+        const {products} = this.state;
 
         const sortValue = event.target.value
         const sortProducts = [...products].sort((a,b)=>{
             if(sortValue==="Lowest"){
                 return a.newPrice>b.newPrice ? 1 : -1
             }
-            if(sortValue==="Highest"){
+            else if(sortValue==="Highest"){
                 return a.newPrice<b.newPrice ? 1 : -1
             }
-            if(sortValue==="Lastest"){
+            else if(sortValue==="Lastest"){
                 return b._id-a._id
             }
-             if(sortValue==="Popular"){
+            else{
                 return a._id-b._id
             }
         })
 
         this.setState(
             {sort: sortValue, products: sortProducts}
-            ,()=> console.log(sort)
+            // ,()=> console.log(sort)
 
         )
     }
-
-   
+  
 
     changeCart = (id, adjust) =>{
         const {products, cart} = this.state;
@@ -124,7 +121,6 @@ class DataProvider extends Component {
               this.setState({ cart }, ()=> console.log(cart))
   
     }
-
 
     removeCart = (id) =>{
         if(window.confirm("Do you want to delete this product?")){
@@ -170,9 +166,6 @@ class DataProvider extends Component {
     componentWillUnmount(){
         console.log("DataProvider componentWillUnmount")        
     }
-
-  
-
 
     render() {
         const {products, sort, cart, rangePrice} = this.state;

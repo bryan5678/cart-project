@@ -73,10 +73,10 @@ const MenuItems=  ({label, to, activeOnlyWhenExact})=>{
             <Navbar bg="light" expand="md" className="py-0 flex-row-reverse">
 
               <Navbar.Brand as="div" className="py-0">
-                <Link className="no-underline relative" to="/cart">
+                <div className="no-underline relative">
                    <MenuItems label={<FaShoppingCart/>} to="/cart"/>
                    <span className={`cart ${totalItem>99 ? "cart-wide"  : ""}`}>{totalItem}</span>
-                </Link>
+                </div>
               </Navbar.Brand>
 
               <Navbar.Brand as="div"><Link className="mx-auto no-underline" to="/">React-Bootstrap</Link></Navbar.Brand>

@@ -8,8 +8,6 @@ class Detail extends Component {
     static contextType = DataContext;
     state = {
         product: [],
-        // redirect: false
-
     }
 
     getProduct = () =>{
@@ -26,43 +24,31 @@ class Detail extends Component {
             }
           
         })    
-        // if(this.props.match.params.id){
-        //     // const res = this.context.products;
-        //     const id = Number(this.props.match.params.id)
-        //     console.log(id)
-
-        //     const data = products.filter(item =>{
-        //         return item._id === id 
-        //     })
-        //     this.setState({product: [...data]},
-        //     // ()=>console.log(this.state.product)
-        //     )
-        // }
+        
     };
 
     componentDidMount(){
         this.getProduct();
-        console.log("Details componentDidMount")
+        // console.log("Details componentDidMount")
         
         const dataProduct = JSON.parse(localStorage.getItem('dataProduct'));
         if(dataProduct !== null){
             this.setState({product: dataProduct}
-            ,()=> console.log(this.state.product)
+            // ,()=> console.log(this.state.product)
             )
         }
         
 
     }
     componentDidUpdate(){
-        console.log("Details componentDidUpdate")
+        // console.log("Details componentDidUpdate")
         const {product} = this.state;
         localStorage.setItem('dataProduct', JSON.stringify(product))
 
     };
 
     componentWillUnmount(){
-        console.log("Details componentWillUnmount")
-        // console.log(this.state.cart)
+        // console.log("Details componentWillUnmount")
         localStorage.removeItem('dataProduct')
     }
 
