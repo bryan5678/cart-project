@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import data from "../data/data.json";
-// import course1 from '../../img/kh1.jpg'
-// import course2 from '../../img/kh2.jpg'
-// import course3 from '../../img/kh3.jpg'
-// import course4 from '../../img/kh4.jpg'
-// import course5 from '../../img/kh5.jpg'
-// import course6 from '../../img/kh6.jpg'
-// import course7 from '../../img/kh7.jpg'
-// import course8 from '../../img/kh8.jpg'
-// import { v4 as uuidv4 } from 'uuid';
 import DataContext from './DataContext';
 
 
@@ -40,58 +31,49 @@ class DataProvider extends Component {
       }
 
     filter = (event) =>{
-        const {rangePrice} = this.state;
-
         const rangePriceValue = event.target.value
         const filterProducts = data.products.filter((item)=>{
-            if(rangePriceValue==="price0"){
-                return item.newPrice 
-            }
             if(rangePriceValue==="price1"){
                 return item.newPrice < 20
             }
-            if(rangePriceValue==="price2"){
+            else if(rangePriceValue==="price2"){
                 return item.newPrice > 20 && item.newPrice < 50
 
             }
-            if(rangePriceValue==="price3"){
+            else if(rangePriceValue==="price3"){
                 return item.newPrice >50 && item.newPrice < 100
             }
-            if(rangePriceValue==="price4"){
+            else if(rangePriceValue==="price4"){
                 return item.newPrice > 100
-            }
+            }else {return item.newPrice }
         })
 
         this.setState(
             {rangePrice: rangePriceValue, products: filterProducts}
-            ,()=> console.log(rangePrice)
-
         )
     }
 
     sorting = (event) =>{
-        const {products, sort} = this.state;
+        const {products} = this.state;
 
         const sortValue = event.target.value
         const sortProducts = [...products].sort((a,b)=>{
-            if(sortValue==="Lowest"){
+           if(sortValue==="Lowest"){
                 return a.newPrice>b.newPrice ? 1 : -1
             }
-            if(sortValue==="Highest"){
+            else if(sortValue==="Highest"){
                 return a.newPrice<b.newPrice ? 1 : -1
             }
-            if(sortValue==="Lastest"){
+            else if(sortValue==="Lastest"){
                 return b._id-a._id
             }
-             if(sortValue==="Popular"){
+            else{
                 return a._id-b._id
             }
         })
 
         this.setState(
             {sort: sortValue, products: sortProducts}
-            ,()=> console.log(sort)
-
         )
     }
 
