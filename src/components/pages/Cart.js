@@ -8,37 +8,57 @@ import DataContext from '../../components/contextAPI/DataContext';
 
 class Cart extends Component {
     static contextType = DataContext;
-    // componentDidMount(){
-    //     this.context.updateTotal()
-    // }
    
+    // state = { width: 0 };
+
+    // updateDimensions = () => {
+    //     // this.setState({ height: document.querySelector(".card").offsetHeight });
+    //     this.setState({ width: window.innerWidth});
+    //   };
+  
    
-
-    shouldComponentUpdate(){
-        console.log("Cart shouldComponentUpdate")
-
-    }
     componentDidUpdate(){
         console.log("Cart componentDidUpdate")
-       
+        // window.addEventListener('resize', this.updateDimensions);
+        // window.addEventListener('load', this.updateDimensions);
+        // const wrapTag = document.querySelectorAll(".card")
+        // for (let tag of wrapTag) {
+        //    let addHeightTag =  tag.style.height
+        //    addHeightTag = `${this.state.height}px`
+        //    console.log(addHeightTag)
+        // //    console.log(this.state.height)
+
+        // }
 
     };
 
     componentDidMount(){
         console.log("Cart componentDidMount")
-        
+        // window.addEventListener('resize', this.updateDimensions);
+        // window.addEventListener('load', this.updateDimensions);
+        // // const wrapTag = document.querySelectorAll(".react-reveal")
+        // // for (let tag of wrapTag) {
+        // //    let addHeightTag =  tag.parentElement.style.height
+        // // //    addHeightTag = `${this.state.height}px`
+        // //    console.log(addHeightTag)
+        // // //    console.log(this.state.height)
+
+        // // }
 
     }
 
     componentWillUnmount(){
         console.log("Cart componentWillUnmount")
         // console.log(this.state.cart)
-        
+        // window.removeEventListener('resize', this.updateDimensions);
+        // window.removeEventListener('load', this.updateDimensions);
+
     }
     
 
     render() {
         const { cart, changeCart, removeCart} = this.context;
+       
         // let unique = [...new Set(cart)];
       
 
@@ -59,8 +79,8 @@ class Cart extends Component {
        
         let result = cart.map((item) =>{
             return(
-                <Fade key={item._id} collapse right>
-                    <Card className="my-3 no-min-height">
+                    <Fade key={item._id} collapse >
+                    <Card className="my-3 height">
                         <Card.Body >
                             <Row className="align-items-center">
                                 <Col sm={12} md={4}>
@@ -95,7 +115,7 @@ class Cart extends Component {
                             </Row>
                         </Card.Body>
                     </Card>
-                </Fade>
+                </Fade>            
             )
         })
         
@@ -104,9 +124,12 @@ class Cart extends Component {
             <Container>
                 <h1 className="app">{`${cart.length === 0 ? "Cart Empty:"  : "Cart includes:"}`} {cart.length} items</h1>
                 <Row>
-                    <TransitionGroup {...this.groupProps}>
+                    {/* <Col style={{height: `${this.state.height}px`}}> */}
+                    <TransitionGroup>
                         {result}
                     </TransitionGroup>
+                    {/* </Col> */}
+                  
                 </Row>
                     <h1 className={`mt-3 ${cart.length === 0 ? "d-none"  : "d-block app"}`}>Total: ${total1.toFixed(2)}</h1>
             </Container>
