@@ -128,7 +128,7 @@ class About extends Component {
                 },
                 value: '',
                 validation: {
-                    required: true,
+                    required: false,
                     isMatch: true,  
                     minLength: 8,
                     maxLength: 20,  
@@ -251,7 +251,7 @@ class About extends Component {
             isValid = pattern.test(value) && isValid
         }
         if (rules.isMatch) {
-            isValid = passValue.match(value) && isValid
+            isValid = passValue === value && isValid
         }
 
         if (rules.isEmail) {
@@ -304,8 +304,8 @@ class About extends Component {
         else if (rules.isPassword && !patternPass.test(value)) {
             return 'Mật khẩu có từ 8-20 ký tự (gồm 1 ký tự viết hoa - 1 ký tự là số)'    
         }
-        else if (rules.isMatch && !passValue.match(value)) {
-            return 'Mật khẩu nhập lại không khớp'    
+        else if (rules.isMatch && passValue !== value) {
+            return 'Mật khẩu nhập lại không chính xác'    
         }
         else if (rules.isEmail && !patternEmail.test(value)) {
             return 'Vui lòng nhập Email'
@@ -332,9 +332,6 @@ class About extends Component {
         updatedFormElement.value = event.target.value;
        
         updatedOrderForm[inputIdentifier] = updatedFormElement;
-        // updatedOrderForm.password.elementConfig.type = "text"
-        // updatedOrderForm.password.elementConfig.type = "text"
-
         updatedFormElement.valid = true;
         updatedFormElement.touched = false;
         updatedOrderForm[inputIdentifier] = updatedFormElement;
