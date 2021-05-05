@@ -72,8 +72,8 @@ class About extends Component {
                 value: '',
                 validation: {
                     required: true,
-                    minLength: 5,
-                    maxLength: 5,
+                    minLength: 4,
+                    maxLength: 6,
                     isNumeric: true
                 },
                 valid: false,
@@ -311,10 +311,10 @@ class About extends Component {
             return 'Vui lòng nhập Email'
         }
         else if (rules.required && !(value.length >= rules.minLength)) {
-            return 'Vui lòng nhập nhiều hơn ' +  rules.minLength + " ký tự"
+            return 'Vui lòng nhập tối thiểu ' + rules.minLength + " chữ số"
         }
         else if (rules.required && !(value.length <= rules.maxLength)) {
-            return 'Vui lòng nhập ít hơn ' +  rules.maxLength + " ký tự"
+            return 'Vui lòng nhập tối đa ' +  rules.maxLength + " chữ số"
         }
         else{
             return 
