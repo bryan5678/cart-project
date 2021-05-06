@@ -13,7 +13,7 @@ class Input extends Component {
                     <Col className="form-group relative" >
                         <label className="text-primary">{this.props.label}</label>
                         <input
-                        className={`form-control ${this.props.invalid && this.props.shouldValidate && this.props.touched ? " border-danger" : " border-success"}`}
+                        className={`form-control pr-4 ${this.props.invalid && this.props.shouldValidate && this.props.touched ? " border-danger" : " border-success"}`}
                         {...this.props.elementConfig}
                         value={this.props.value}
                         onInput={this.props.changed} 
