@@ -8,7 +8,7 @@ import { FaEyeSlash, FaEye } from 'react-icons/fa';
 class About extends Component {
 
     state={
-        orderForm: {
+         orderForm: {
             lastName: {
                 elementType: 'input',
                 elementConfig: {
@@ -25,13 +25,14 @@ class About extends Component {
                 },
                 valid: false,
                 touched: false,
-                label: "Your Last Name",
+                label: "Last Name",
+           
             },
             firstName: {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'First Name'
+                    placeholder: 'Your First Name'
                 },
                 value: '',
                 validation: {
@@ -44,6 +45,7 @@ class About extends Component {
                 valid: false,
                 touched: false,
                 label: "First Name",
+               
             },
             address: {
                 elementType: 'input',
@@ -60,8 +62,8 @@ class About extends Component {
                 },
                 valid: false,
                 touched: false,
-                label: "address"
-
+                label: "address",
+            
             },
             zipCode: {
                 elementType: 'input',
@@ -78,7 +80,26 @@ class About extends Component {
                 },
                 valid: false,
                 touched: false,
-                label: "ZIP code"
+                label: "ZIP code",
+            
+
+            },
+            country: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Country'
+                },
+                value: '',
+                validation: {
+                    required: true,
+                    minLength: 1,
+                    maxLength: 32, 
+                },
+                valid: false,
+                touched: false,
+                label: "Country",
+               
 
             },
             phone: {
@@ -96,64 +117,8 @@ class About extends Component {
                 },
                 valid: false,
                 touched: false,
-                label: "Phone Number"
-
-            },
-            password: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'password',
-                    placeholder: 'Password',
-                    autoComplete: 'off'
-                },
-                value: '',
-                validation: {
-                    required: true,
-                    isPassword: true,
-                    minLength: 8,
-                    maxLength: 20,
-                },
-                valid: false,
-                touched: false,
-                label: "Password",
-                icon: <FaEyeSlash/>,
-            },
-            passwordConfirm: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'password',
-                    placeholder: 'Password Confirmation',
-                    autoComplete: 'off'
-
-                },
-                value: '',
-                validation: {
-                    required: false,
-                    isMatch: true,  
-                    minLength: 8,
-                    maxLength: 20,  
-                },
-                valid: false,
-                touched: false,
-                label: "Password Confirmation",
-                icon: <FaEyeSlash/>,
-            },
-            country: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'text',
-                    placeholder: 'Country'
-                },
-                value: '',
-                validation: {
-                    required: true,
-                    minLength: 1,
-                    maxLength: 32, 
-                },
-                valid: false,
-                touched: false,
-                label: "Country"
-
+                label: "Phone Number",
+               
             },
             email: {
                 elementType: 'input',
@@ -170,23 +135,63 @@ class About extends Component {
                 },
                 valid: false,
                 touched: false,
-                label: "Email"
-
+                label: "Email",
+               
             },
-            deliveryMethod: {
+            genderOption: {
                 elementType: 'select',
                 elementConfig: {
                     options: [
-                        {value: 'fastest', displayValue: 'Fastest'},
-                        {value: 'cheapest', displayValue: 'Cheapest'}
+                        {value: 'male', displayValue: 'Male'},
+                        {value: 'female', displayValue: 'Female'},
+                        {value: 'other', displayValue: 'Other'}
                     ]
                 },
                 value: '',
                 validation: {},
                 valid: true,
-                label: "Delivery Type"
+                label: "Gender",
+               
+            },
+            password: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'password',
+                    placeholder: 'Password',
+                    autoComplete: 'off'
+                },
+                value: '',
+                validation: {
+                    required: false,
+                    isPassword: true,
+                    minLength: 8,
+                    maxLength: 20,
+                },
+                valid: false,
+                touched: false,
+                label: "Password",
+                icon: <FaEyeSlash/>,
+               
+            },
+            passwordConfirm: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'password',
+                    placeholder: 'Password Confirmation',
+                    autoComplete: 'off'
 
-            }
+                },
+                value: '',
+                validation: {
+                    required: true,
+                    isMatch: true,  
+                },
+                valid: false,
+                touched: false,
+                label: "Password Confirmation",
+                icon: <FaEyeSlash/>,
+              
+            },
         },
         formIsValid: false,
         loading: false
@@ -373,27 +378,28 @@ class About extends Component {
         }
         let form = (
             <form onSubmit={this.orderHandler}>
-
-                {formElementsArray.map(formElement => (
-                    <Input 
-                        key={formElement.id}
+                <div className="form-row">
+                    {formElementsArray.map(formElement => (
+                     <Input 
+                       key={formElement.id}
                         elementType={formElement.config.elementType}
                         elementConfig={formElement.config.elementConfig}
-                        label={formElement.config.label}
-                        icon={formElement.config.icon}
-                        showPassword={()=>this.toogleType(formElement.id)}
-                        error={this.showError(formElement.config.value, formElement.config.validation)}
                         value={formElement.config.value}
                         invalid={!formElement.config.valid}
                         shouldValidate={formElement.config.validation}
                         touched={formElement.config.touched}
                         changed={(event) => this.inputChangedHandler(event, formElement.id)} 
-                        blured={(event) => this.bluredHandler(event, formElement.id)}           
+            
+                        blured={(event) => this.bluredHandler(event, formElement.id)}  
+                        error={this.showError(formElement.config.value, formElement.config.validation)}
+                        showPassword={()=>this.toogleType(formElement.id)}
+                        label={formElement.config.label}
+                        icon={formElement.config.icon}         
                         />
-                ))}
-
+                     ))}
+                 </div>
             <Col>
-                <button className="my-3 btn btn-primary" disabled={!this.state.formIsValid}>ORDER</button>
+                <button className="my-3 btn btn-primary" disabled={!this.state.formIsValid}>SUBMIT</button>
             </Col>
             </form>
         );
